@@ -52,7 +52,7 @@ static UIView *activeView;
 		static NSArray *filters;
 		if (!filters) {
 			CAFilter *filter = [CAFilter filterWithType:@"gaussianBlur"];
-			[filter setValue:[NSNumber numberWithFloat:5.0f] forKey:@"inputRadius"];
+			[filter setValue:[NSNumber numberWithFloat:7.5f] forKey:@"inputRadius"];
 			filters = [[NSArray alloc] initWithObjects:filter, nil];
 		}
 		CALayer *layer = activeView.layer;
@@ -60,7 +60,7 @@ static UIView *activeView;
 		layer.shouldRasterize = YES;
 		activeView.alpha = 0.0f;
 		[self insertSubview:activeView atIndex:0];
-		[self linenView].backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
+		[self linenView].backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.48f];
 	}
 	return self;
 }
